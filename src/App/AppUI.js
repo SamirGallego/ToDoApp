@@ -9,6 +9,7 @@ import { TodosEmpty } from '../TodosEmpty';
 import { TodoContext } from '../TodoContext';
 import { Modal } from '../Modal';
 import { TodoForm } from '../TodoForm';
+import { DeleteConfirmation } from '../DeleteConfirmation';
 import './App.css';
 import React from 'react';
 
@@ -20,7 +21,8 @@ function AppUI() {
         toDoCompleted,
         toDoDelete,
         openModal,
-        updateTodo
+        setOpenModal,
+        editingTodo
     } = React.useContext(TodoContext);
 
     return (
@@ -49,7 +51,6 @@ function AppUI() {
                                     completed={todo.completed}
                                     onComplete={() => { toDoCompleted(todo.text) }}
                                     onDelete={() => { toDoDelete(todo.text) }}
-                                    updateTodo={() => { updateTodo(todo.text) }}
                                 />
                             ))}
                         </TodoList>
@@ -60,7 +61,7 @@ function AppUI() {
 
                 {openModal && (
                     <Modal>
-                        <TodoForm />
+                        {editingTodo ? <DeleteConfirmation /> : <TodoForm />}
                     </Modal>
                 )}
             </div>
