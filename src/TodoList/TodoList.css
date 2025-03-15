@@ -1,0 +1,78 @@
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: calc(100vh - 300px);
+    flex: 1;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(97, 218, 251, 0.6) transparent;
+    display: flex;
+    flex-direction: column;
+    /* Añadido gap pequeño entre secciones */
+}
+
+
+/* Título de sección completados */
+.completed-text {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 600;
+    background: linear-gradient(to right, #61dafb, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.8;
+}
+
+/* Animaciones */
+.todo-item {
+    animation: slideIn 0.3s ease forwards;
+    transition: all 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Estilos para la barra de desplazamiento */
+.todo-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.todo-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.todo-list::-webkit-scrollbar-thumb {
+    background-color: rgba(97, 218, 251, 0.6);
+    border-radius: 3px;
+}
+
+.todo-list::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(97, 218, 251, 0.8);
+}
+
+.completed-todos {
+    padding: 0;
+    override-colors: #888;
+}
+
+.completed-container {
+    padding: 0;
+    margin-bottom: 0;
+}

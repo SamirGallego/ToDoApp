@@ -1,0 +1,66 @@
+.container {
+    position: relative;
+    background: linear-gradient(to bottom, #1a1e24, #282c34);
+    color: white;
+    text-align: center;
+    padding: 3em;
+    border-radius: 15px;
+    border: 1px solid rgba(97, 218, 251, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 0.2em auto;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header {
+    margin-bottom: 0.5em;
+}
+
+.title {
+    background: linear-gradient(to right, #61dafb, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5em;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0.5em;
+}
+
+.title-underline {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, #61dafb, #a78bfa);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.todo-list-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 3em;
+    margin-bottom: 50px;
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(97, 218, 251, 0.6) transparent;
+}
+
+.todo-list-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.todo-list-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.todo-list-container::-webkit-scrollbar-thumb {
+    background-color: rgba(97, 218, 251, 0.6);
+    border-radius: 4px;
+}
+
+.todo-list-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(97, 218, 251, 0.8);
+}

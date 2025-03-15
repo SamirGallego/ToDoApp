@@ -1,0 +1,227 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: white;
+    border-bottom: 1px solid rgba(97, 218, 251, 0.2);
+    transition: all 0.3s ease;
+    max-height: fit-content;
+    animation: slideIn 0.3s ease forwards;
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+.todo-item:hover {
+    background: rgba(97, 218, 251, 0.05);
+}
+
+/* Animaciones */
+.todo-item {
+    animation: slideIn 0.3s ease forwards;
+    transition: all 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación para items completados */
+.todo-item.completed {
+    animation: moveToCompleted 0.3s ease forwards;
+}
+
+@keyframes moveToCompleted {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.todo-item-complete {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px groove #61dafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: #61dafb;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.todo-item-complete svg {
+    width: 16px;
+    height: 16px;
+}
+
+.todo-item-complete:hover {
+    background: rgba(97, 218, 251, 0.1);
+}
+
+.todo-item.completed .todo-item-complete {
+    background: #61dafb;
+    color: white;
+}
+
+.todo-item p {
+    flex: 1;
+    margin: 0;
+    color: #282c34;
+    font-size: 1.1rem;
+}
+
+.todo-item.completed p {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.todo-item.completed {
+    transition: all 0.3s ease;
+    animation: moveToBottom 0.3s ease forwards;
+}
+
+.todo-item-delete {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    fill: #505050;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+}
+
+.todo-item-delete svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.todo-item-delete:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.todo-item-delete:hover svg {
+    fill: #f44336;
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0) rotate(0);
+    }
+
+    10% {
+        transform: translateX(-1px) rotate(-10deg);
+    }
+
+    20% {
+        transform: translateX(2px) rotate(10deg);
+    }
+
+    30% {
+        transform: translateX(-3px) rotate(-15deg);
+    }
+
+    40% {
+        transform: translateX(3px) rotate(15deg);
+    }
+
+    50% {
+        transform: translateX(-2px) rotate(-10deg);
+    }
+
+    60% {
+        transform: translateX(2px) rotate(10deg);
+    }
+
+    70% {
+        transform: translateX(-1px) rotate(-5deg);
+    }
+
+    80% {
+        transform: translateX(1px) rotate(5deg);
+    }
+
+    90% {
+        transform: translateX(-0.5px) rotate(-2.5deg);
+    }
+
+    100% {
+        transform: translateX(0) rotate(0);
+    }
+}
+
+.todo-item:hover .todo-item-delete {
+    opacity: 1;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveToBottom {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(100%);
+    }
+}
+
+/* Animación para items completados */
+.todo-item.completed {
+    animation: moveToCompleted 0.3s ease forwards;
+}
+
+@keyframes moveToCompleted {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

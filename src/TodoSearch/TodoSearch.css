@@ -1,0 +1,30 @@
+.TodoSearch {
+    padding: 1rem;
+    width: 80%;
+    align-self: center;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.07);
+    border: 2px solid rgba(97, 218, 251, 0.2);
+    border-radius: 10px;
+    color: #ffffff;
+    outline: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.TodoSearch::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.TodoSearch:focus {
+    border-color: rgba(97, 218, 251, 0.6);
+    box-shadow: 0 0 15px rgba(97, 218, 251, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.TodoSearch:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(97, 218, 251, 0.4);
+}

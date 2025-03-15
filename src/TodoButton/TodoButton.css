@@ -1,0 +1,56 @@
+.container {
+    position: relative;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.create-todo-button {
+    position: absolute;
+    /* Cambiado de fixed a absolute */
+    bottom: 24px;
+    right: 24px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #61dafb, #a78bfa);
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(97, 218, 251, 0.3);
+    transition: all 0.3s ease;
+    z-index: 2;
+    /* Asegura que el botón esté siempre visible */
+
+}
+
+.create-todo-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(97, 218, 251, 0.4);
+}
+
+.create-todo-button:active {
+    transform: scale(0.95) rotate(360deg);
+    animation: rotate 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .create-todo-button {
+        width: 56px;
+        height: 56px;
+        bottom: 16px;
+        right: 16px;
+        font-size: 2rem;
+    }
+}

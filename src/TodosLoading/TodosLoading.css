@@ -1,0 +1,28 @@
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    gap: 10px;
+}
+
+.loading__line {
+    width: 60%;
+    max-width: 300px;
+    height: 4px;
+    background-color: #09f;
+    animation: loadingAnimation 1s infinite ease-in-out;
+}
+
+@keyframes loadingAnimation {
+
+    0%,
+    100% {
+        transform: scaleX(0);
+    }
+
+    50% {
+        transform: scaleX(1);
+    }
+}
