@@ -4,7 +4,8 @@ import './TodosEmpty.css';
 function TodosEmpty() {
     return (
         <div className='empty'>
-            <p>Ingresa una nueva tarea</p>
+            <div className="icon">📝</div>
+            <p>¡Escribe tu primer ToDo!</p>
         </div>
     );
 }

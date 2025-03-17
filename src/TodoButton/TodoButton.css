@@ -14,7 +14,6 @@
 
 .create-todo-button {
     position: absolute;
-    /* Cambiado de fixed a absolute */
     bottom: 24px;
     right: 24px;
     width: 64px;
@@ -31,21 +30,28 @@
     box-shadow: 0 4px 15px rgba(97, 218, 251, 0.3);
     transition: all 0.3s ease;
     z-index: 2;
-    /* Asegura que el botón esté siempre visible */
-
 }
 
 .create-todo-button:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(97, 218, 251, 0.4);
 }
 
 .create-todo-button:active {
-    transform: scale(0.95) rotate(360deg);
-    animation: rotate 0.5s ease-in-out;
+    transform: scale(0.95);
 }
 
 @media (max-width: 768px) {
+    .create-todo-button {
+        width: 56px;
+        height: 56px;
+        bottom: 16px;
+        right: 16px;
+        font-size: 2rem;
+    }
+}
+
+/* Media query para pantallas menores a 500px */
+@media (max-width: 500px) {
     .create-todo-button {
         width: 56px;
         height: 56px;

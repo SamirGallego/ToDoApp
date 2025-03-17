@@ -19,7 +19,6 @@
     transition: all 0.3s ease;
     resize: none;
     display: block;
-
 }
 
 .modal-input::placeholder {
@@ -31,7 +30,6 @@
 .modal-input:focus {
     outline: none;
     border-color: #61dafb;
-    box-shadow: 0 0 0 3px rgba(97, 218, 251, 0.2);
 }
 
 .TodoForm-buttonContainer {
@@ -95,4 +93,21 @@
 .modal-close:hover {
     color: #a78bfa;
     transform: rotate(90deg);
+}
+
+/* Media query para pantallas menores a 500px */
+@media (max-width: 500px) {
+    .modal label {
+        font-size: 2rem;
+    }
+
+    .modal-input {
+        font-size: 1rem;
+    }
+
+    .modal-cancel-button,
+    .modal-add-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
 }

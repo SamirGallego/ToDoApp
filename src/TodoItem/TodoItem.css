@@ -225,3 +225,45 @@
         transform: translateY(0);
     }
 }
+
+@media (max-width: 500px) {
+    .todo-item p {
+        font-size: 0.9rem;
+    }
+
+    .todo-item-complete svg,
+    .todo-item-delete svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .todo-item-complete {
+        width: 20px;
+        height: 20px;
+    }
+
+    .todo-item-delete {
+        padding: 0.4rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .todo-item p {
+        font-size: 0.9rem;
+    }
+
+    .todo-item-complete svg,
+    .todo-item-delete svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .todo-item-complete {
+        width: 20px;
+        height: 20px;
+    }
+
+    .todo-item-delete {
+        padding: 0.4rem;
+    }
+}

@@ -29,9 +29,9 @@ function TodoList({ children }) {
 
             {/* Renderizar todos incompletos */}
             {incompleteTodos.length > 0 && (
-                <li>
+                <div>
                     {incompleteTodos}
-                </li>
+                </div>
             )}
 
             {/* Renderizar todos completados */}

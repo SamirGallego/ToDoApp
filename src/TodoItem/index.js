@@ -18,11 +18,11 @@ function TodoItem({ text, completed, onComplete, onDelete }) {
     };
 
     return (
-        <li className={`todo-item ${completed ? 'completed' : ''}`} data-text={text}>
+        <div className={`todo-item ${completed ? 'completed' : ''}`} data-text={text}>
             <CompleteIcon onClick={onComplete} />
             <p className="todo-item-text" onClick={handleTextClick} style={{ cursor: 'pointer' }}>{text}</p>
             <DeleteIcon className="todo-item-delete" onClick={handleDeleteClick} />
-        </li>
+        </div>
     );
 }
 

@@ -6,15 +6,28 @@
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
-    max-height: calc(100vh - 300px);
+    height: fit-content;
+    max-height: calc(100vh - 400px);
     flex: 1;
     scrollbar-width: thin;
     scrollbar-color: rgba(97, 218, 251, 0.6) transparent;
     display: flex;
     flex-direction: column;
-    /* Añadido gap pequeño entre secciones */
 }
 
+.todo-list-section {
+    padding: 4px 0;
+}
+
+.todo-list-section:not(:last-child) {
+    border-bottom: 1px solid rgba(97, 218, 251, 0.2);
+    margin-bottom: 4px;
+}
+
+.todo-list-section.completed {
+    background-color: rgba(97, 218, 251, 0.05);
+    padding-top: 4px;
+}
 
 /* Título de sección completados */
 .completed-text {
@@ -47,8 +60,6 @@
     }
 }
 
-
-
 /* Estilos para la barra de desplazamiento */
 .todo-list::-webkit-scrollbar {
     width: 6px;
@@ -75,4 +86,11 @@
 .completed-container {
     padding: 0;
     margin-bottom: 0;
+}
+
+/* Media query para pantallas menores a 500px */
+@media (max-width: 500px) {
+    .completed-text {
+        font-size: 0.8rem;
+    }
 }
